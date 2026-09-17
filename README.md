@@ -70,7 +70,7 @@ https://github.com/lookingformasrur-dot/movie-explorer
 
 ## Live Demo
 
-Live demo link will be added after deployment.
+[Live Demo](https://resplendent-babka-944e8c.netlify.app/)
 
 ## Author
 
