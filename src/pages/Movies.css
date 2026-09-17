@@ -1,0 +1,268 @@
+main {
+  padding: 40px 60px;
+  background: #f3f4f6;
+  min-height: 100vh;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.movie-count {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 25px;
+  color: #6b7280;
+}
+
+.movie-search {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  padding: 15px 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-size: 16px;
+  outline: none;
+}
+
+.movie-search:focus {
+  border-color: #7c3aed;
+}
+
+/* Movie Grid */
+
+.movie-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Modal */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.modal-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 28px;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+
+  animation: modalOpen 0.25s ease;
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Close Button */
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(17, 24, 39, 0.85);
+  color: white;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #7c3aed;
+  transform: rotate(90deg);
+}
+
+/* Modal Image */
+
+.modal-content > img {
+  width: 100%;
+  height: 380px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  display: block;
+  margin-bottom: 22px;
+}
+
+/* Modal Title */
+
+.modal-content h2 {
+  margin: 0 0 18px;
+
+  font-size: 30px;
+  line-height: 1.2;
+
+  color: #111827;
+}
+
+/* Modal Text */
+
+.modal-content p {
+  margin: 10px 0;
+
+  color: #4b5563;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Summary */
+
+.modal-content p:last-of-type {
+  margin-top: 20px;
+  padding-top: 20px;
+
+  border-top: 1px solid #e5e7eb;
+
+  color: #374151;
+}
+
+/* Official Website */
+
+.modal-content a {
+  display: inline-block;
+
+  margin-top: 20px;
+  padding: 11px 18px;
+
+  border-radius: 8px;
+
+  background: #7c3aed;
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: background 0.3s ease;
+}
+
+.modal-content a:hover {
+  background: #6d28d9;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  main {
+    padding: 30px 15px;
+  }
+
+  main h1 {
+    font-size: 28px;
+  }
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .movie-search {
+    padding: 13px 15px;
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+
+  .movie-count {
+    font-size: 14px;
+  }
+
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-content {
+    max-height: 92vh;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .modal-content > img {
+    height: 230px;
+    border-radius: 10px;
+  }
+
+  .modal-content h2 {
+    font-size: 23px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+
+    width: 34px;
+    height: 34px;
+  }
+}

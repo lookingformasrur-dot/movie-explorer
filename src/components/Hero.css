@@ -1,0 +1,133 @@
+.hero {
+  min-height: 620px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 80px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(17, 24, 39, 0.94),
+      rgba(31, 11, 60, 0.586)
+    ),
+    url("https://static.tvmaze.com/uploads/images/original_untouched/639/1599593.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-content p:first-child {
+  margin-bottom: 18px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  color: #c084fc;
+
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0 0 25px;
+
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1.05;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  display: block;
+
+  background: linear-gradient(90deg, #c084fc, #f472b6);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p:last-of-type {
+  max-width: 650px;
+  margin: 0 auto;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #d1d5db;
+}
+
+.hero button {
+  margin-top: 32px;
+
+  padding: 14px 30px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #9333ea, #7c3aed);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero button:hover {
+  transform: translateY(-3px);
+
+  background: linear-gradient(135deg, #a855f7, #8b5cf6);
+
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.264);
+}
+
+.hero button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 560px;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p:first-child {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .hero-content p:last-of-type {
+    font-size: 15px;
+  }
+
+  .hero button {
+    width: 100%;
+    max-width: 240px;
+  }
+}
